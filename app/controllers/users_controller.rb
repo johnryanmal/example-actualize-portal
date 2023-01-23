@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     page = params[:page]&.to_i || 0
     offset = page_size * page
 
-    @users = User.where(role_id: 1).limit(page_size).offset(offset)
+    @users = User.where(role_id: 1).includes(:cohort, :submissions).limit(page_size).offset(offset)
     render template: "users/index"
   end
 end

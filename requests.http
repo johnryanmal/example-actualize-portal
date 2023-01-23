@@ -1,5 +1,5 @@
 ### USERS INDEX
-GET http://localhost:3000/users.json?page=0&page_size=2
+GET http://localhost:3000/users.json
 
 ### COHORTS INDEX
 GET http://localhost:3000/cohorts.json
